@@ -1,0 +1,269 @@
+{
+	"info": {
+		"_postman_id": "07a75f45-ae95-4c55-867f-230d43b0a831",
+		"name": "one-click-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "create-github-repo",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n       \"apiName\" : \"git-commit-node\",\n       \"githubToken\" : \"github token\",\n       \"userAgent\":\"some user agent\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/v1/one-click-api/create-github-repo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"one-click-api",
+						"create-github-repo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "make-local-directory",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n       \"destinationPath\" : \"D:/git-commit-node\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/v1/one-click-api/make-local-directory",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"one-click-api",
+						"make-local-directory"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create-local-repo",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n       \"localRepoPath\" : \"D:/git-commit-node\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/v1/one-click-api/create-local-repo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"one-click-api",
+						"create-local-repo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "copy-directory",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\t\"sourcePath\":\"D:/one-click-api/node\",\n       \"destinationPath\" : \"D:/git-commit-node\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/v1/one-click-api/copy-directory",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"one-click-api",
+						"copy-directory"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "git-add",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n       \"directory\" : \"D:/git-commit-node\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/v1/one-click-api/git-add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"one-click-api",
+						"git-add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "git-commit",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n       \"directory\" : \"D:/git-commit-node\",\r\n       \"name\"      : \"akash\",\r\n       \"email\"     : \"email@gmail.com\",\r\n       \"ref\"       : \"master\",\r\n       \"commitMessage\" : \"commit message\"\r\n   }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/v1/one-click-api/git-commit",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"one-click-api",
+						"git-commit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "git-push",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n       \"directory\" : \"D:/git-commit-node\",\r\n       \"username\"  : \"email@gmail.com\",\r\n       \"password\"  : \"pwd\",\r\n       \"ref\"       : \"master\",\r\n       \"remoteRef\" : \"master\",\r\n       \"gitUrl\" : \"https://github.com/gitusername/git-commit-node.git\"\r\n   }\r\n   \r\n ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/v1/one-click-api/git-push",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"one-click-api",
+						"git-push"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
